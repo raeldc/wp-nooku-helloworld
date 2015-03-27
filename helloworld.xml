@@ -13,7 +13,7 @@
     <description>Helloworld plugin for Wordpress build using Nooku Framework</description>
 
     <administration>
-        <menu>Acme</menu>
+        <menu page="helloworld" query="component=helloworld" capability="manage_options">Helloworld</menu>
         <submenu>
             <menu page="helloworld-hello" query="component=helloworld&amp;view=hello" capability="manage_options" img="class:hello">Hello</menu>
             <menu page="helloworld-error" query="component=helloworld&amp;view=error" capability="manage_options" img="class:error">Error</menu>
