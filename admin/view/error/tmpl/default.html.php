@@ -8,4 +8,4 @@
  */
 ?>
 
-i_am_so_undefined();
+<?= i_am_so_undefined(); ?>
