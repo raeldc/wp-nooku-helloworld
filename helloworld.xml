@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.0">
+    <name>Helloworld</name>
+    <version>1.0</version>
+    <date>March 2015</date>
+    <author>
+        <name>Nooku Project</name>
+        <email>info@nooku.org</email>
+        <link>www.nooku.org</link>
+    </author>
+    <copyright>Copyright (C) 2011 - 2015 Timble CVBA and Contributors. (http://www.timble.net)</copyright>
+    <license>http://www.gnu.org/licenses/gpl.html GNU/GPL v3</license>
+    <description>Helloworld plugin for Wordpress</description>
+
+    <administration>
+        <menu>Acme</menu>
+        <submenu>
+            <menu page="helloworld-hello" query="component=helloworld&amp;view=hello" capability="manage_options" img="class:hello">Hello</menu>
+            <menu page="helloworld-error" query="component=helloworld&amp;view=error" capability="manage_options" img="class:error">Error</menu>
+        </submenu>
+    </administration>
+</extension>
