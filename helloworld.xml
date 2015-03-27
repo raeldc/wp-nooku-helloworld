@@ -10,7 +10,7 @@
     </author>
     <copyright>Copyright (C) 2011 - 2015 Timble CVBA and Contributors. (http://www.timble.net)</copyright>
     <license>http://www.gnu.org/licenses/gpl.html GNU/GPL v3</license>
-    <description>Helloworld plugin for Wordpress</description>
+    <description>Helloworld plugin for Wordpress build using Nooku Framework</description>
 
     <administration>
         <menu>Acme</menu>
