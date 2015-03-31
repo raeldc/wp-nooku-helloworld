@@ -8,4 +8,4 @@
  */
 ?>
 
-<div>Site application says, Hello!</div>
+<div>Site application says, Hello <?= object('user')->getName() ?>!</div>

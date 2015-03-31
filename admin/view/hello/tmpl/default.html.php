@@ -8,4 +8,4 @@
  */
 ?>
 
-<div>Admin application says, Hello!</div>
+<div>Admin application says, Hello <?= object('user')->getName() ?>!</div>
