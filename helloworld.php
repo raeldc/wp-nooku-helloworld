@@ -10,19 +10,23 @@
 /*
 Plugin Name: Helloworld
 Plugin URI: http://github.com/nooku/wordpress-helloworld
-Description: Hellowworld Plugin for Wordpress
+Description: Hello World Plugin for Wordpress
 Author: Johan Janssens and Timble CVBA
 Version: 0.1
 Author URI: http://nooku.org/
+Updates URL: https://api.github.com/repos/raeldc/wp-nooku-helloworld/releases
 */
 
-add_action('koowa_before_bootstrap', 'helloworld_bootstrap');
+add_action('koowa_after_bootstrap', 'helloworld_bootstrap');
 
 function helloworld_bootstrap()
 {
-    KObjectManager::getInstance()
-        ->getObject('lib:object.bootstrapper')
+    $manager = KObjectManager::getInstance();
+    $manager->getObject('lib:object.bootstrapper')
         ->registerComponent('helloworld', __DIR__, 'helloworld')
         ->registerComponent('helloworld', __DIR__.'/admin', 'admin');
-        //->registerComponent('helloworld', __DIR__.'/site',  'site');
+
+    if(is_admin()) {
+        $manager->getObject('com:helloworld.resources.updater', array('plugin_file' => __FILE__));
+    }
 }
