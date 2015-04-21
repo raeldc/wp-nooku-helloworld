@@ -12,7 +12,7 @@ Plugin Name: Helloworld
 Plugin URI: http://github.com/nooku/wordpress-helloworld
 Description: Hello World Plugin for Wordpress
 Author: Johan Janssens and Timble CVBA
-Version: 0.3
+Version: 0.3.1
 Author URI: http://nooku.org/
 */
 
@@ -27,9 +27,9 @@ function helloworld_bootstrap()
 
     if(is_admin())
     {
-        $manager->getObject('com:helloworld.resources.updater', array(
-            'plugin_file' => __FILE__,
-            'updates_url' => 'https://api.github.com/repos/raeldc/wp-nooku-helloworld/releases'
+        $manager->getObject('com:helloworld.updater', array(
+            'plugin_file'  => __FILE__,
+            'releases_url' => 'https://api.github.com/repos/raeldc/wp-nooku-helloworld/releases'
         ));
     }
 }
